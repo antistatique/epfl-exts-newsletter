@@ -9,7 +9,7 @@
   <meta property="og:type" content="event">
   <meta property="og:description" content="EPFL Extension School – more information on our website https://exts.epfl.ch/">
   <meta property="og:site_name" content="EPFL Extension School">
-  <title>TEDxLausanne</title>
+  <title>EPFL Extension School</title>
   <style type="text/css">
     /* Resets: see reset.css for details */
     .ReadMsgBody { width: 100%; background-color: #ffffff;}
@@ -42,51 +42,32 @@
     img{
       display: block;
     }
+    .floating-text{
+      float: right;
+    }
+    .container-padding {
+      padding: 20px;
+    }
     /* Constrain email width for small screens */
     @media screen and (max-width: 600px) {
       table[class="container"] {
         width: 95% !important;
       }
+      p.floating-text{
+        float: none;
+      }
+      .no-background-url-mobile{
+        background-image: url(px.gif)!important;
+      }
     }
     /* Give content more room on mobile */
     @media screen and (max-width: 480px) {
-      td[class="container-padding"] {
+      .container-padding {
         padding-left: 12px !important;
         padding-right: 12px !important;
       }
     }
-    /* Styles for forcing columns to rows */
-    @media only screen and (max-width : 600px) {
-      /* force container columns to (horizontal) blocks */
-      td[class="force-col"] {
-        display: block;
-        padding-right: 0 !important;
-      }
-      table[class="col-2"] {
-        /* unset table align="left/right" */
-        float: none !important;
-        width: 100% !important;
-        /* change left/right padding and margins to top/bottom ones */
-        margin-bottom: 12px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid transparent;
-      }
-      /* remove bottom border for last column/row */
-      table[id="last-col-2"] {
-        border-bottom: none !important;
-        margin-bottom: 0;
-      }
-      img[class="col-2-header"] {
-        width: 100% !important;
-      }
-      /* align images right and shrink them a bit */
-      img[class="col-2-img"] {
-        /*            float: right;*/
-        /*            margin-left: 6px;*/
-        float: none !important;
-        max-width: 130px !important;
-      }
-    }
+
   </style>
 </head>
 <body style="margin:0px; padding:0px;" bgcolor="#ffffff" link="#FF0000" vlink="#FF0000" style="-webkit-text-size-adjust: none;" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
@@ -99,11 +80,13 @@
       <td align="center" valign="top" bgcolor="#ffffff" style="background-color: #ffffff;">
         <table border="0" width="600" cellpadding="0" cellspacing="0" class="container" bgcolor="#ffffff">
           <tr>
-            <td align="left">
+            <td>
+              <p class="floating-text">
+                <singleline>
+                  titre de la newsletter
+                </singleline>
+              </p>
               <a href="https://exts.epfl.ch/"><img src="logo.png" alt="" border="0" width="240"></a>
-            </td>
-            <td align="right">
-              <p>titre de la newsletter</p>
             </td>
           </tr>
         </table>
@@ -120,7 +103,7 @@
           <layout label="Title, paragraph, link light">
             <table border="0" width="600" cellpadding="0" cellspacing="0" class="container" bgcolor="#F7F7F7">
               <tr>
-                <td class="container-padding" bgcolor="#ffffff" style="padding :2em; background-color: #F7F7F7; font-size: 16px; line-height: 22px; font-family: Helvetica, Arial, sans-serif; color: #333;">
+                <td class="container-padding" bgcolor="#ffffff" style="background-color: #F7F7F7; font-size: 16px; line-height: 22px; font-family: Helvetica, Arial, sans-serif; color: #333;">
                   <table border="0" cellpadding="0" cellspacing="0" class="columns-container">
                     <tr>
                       <td>
@@ -145,7 +128,7 @@
           <layout label="Title, paragraph, link dark">
             <table border="0" width="600" cellpadding="0" cellspacing="0" class="container" bgcolor="#000000">
               <tr>
-                <td class="container-padding" bgcolor="#000000" style="padding :2em; background-color: #000000 font-size: 16px; line-height: 22px; font-family: Helvetica, Arial, sans-serif; color: #333;">
+                <td class="container-padding" bgcolor="#000000" style="background-color: #000000 font-size: 16px; line-height: 22px; font-family: Helvetica, Arial, sans-serif; color: #333;">
                   <table border="0" cellpadding="0" cellspacing="0" class="columns-container">
                     <tr>
                       <td>
@@ -178,10 +161,10 @@
             </table>
           </layout>
           <layout label="Centered image">
-            <table width="600" cellpadding="0" cellspacing="0" border="0">
+            <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
               <tr bgcolor="#ffffff" style="background-color:#ffffff">
                 <td bgcolor="#ffffff" style="background-color:#ffffff" align="center">
-                  <img editable src="lavaux.jpg" alt="" width="100%" style="height:auto;" label='Hero Image'>
+                  <img editable src="lavaux.jpg" alt="" width="600" style="height:auto;width:100%;" label='Hero Image'>
                 </td>
               </tr>
             </table>
@@ -189,7 +172,7 @@
           <layout label="Text with light background image">
             <table cellpadding="0" cellspacing="0" border="0" width="100%">
               <tr>
-                <td style="background:#DEE2E4 url(ipad_bg.jpg) top right no-repeat;" bgcolor="#000000" valign="top">
+                <td style="background:#DEE2E4 url(ipad_bg.jpg) top right no-repeat;" bgcolor="#000000" valign="top" class="no-background-url-mobile">
                   <!--[if gte mso 9]>
                   <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;">
                     <v:fill type="tile" src="ipad_bg.jpg" color="#ffffff" />
@@ -201,7 +184,7 @@
                         <td height="20"><img src="px.gif" alt="" height="20"></td>
                       </tr>
                       <tr>
-                        <td class="container-padding" style="padding :2em; font-size: 16px; line-height: 22px; font-family: Helvetica, Arial, sans-serif; color: #333;">
+                        <td class="container-padding" style="font-size: 16px; line-height: 22px; font-family: Helvetica, Arial, sans-serif; color: #333;">
                           <table border="0" cellpadding="0" cellspacing="0" class="columns-container">
                             <tr>
                               <td>
@@ -251,7 +234,7 @@
                         <td height="20"><img src="px.gif" alt="" height="20"></td>
                       </tr>
                       <tr>
-                        <td class="container-padding" style="padding :2em; font-size: 16px; line-height: 22px; font-family: Helvetica, Arial, sans-serif; color: #333;">
+                        <td class="container-padding" style="font-size: 16px; line-height: 22px; font-family: Helvetica, Arial, sans-serif; color: #333;">
                           <table border="0" cellpadding="0" cellspacing="0" class="columns-container">
                             <tr>
                               <td>
@@ -289,7 +272,7 @@
           <layout label='Title and paragraph'>
             <table border="0" width="600" cellpadding="0" cellspacing="0" class="container" bgcolor="#ffffff">
               <tr>
-                <td class="container-padding" bgcolor="#ffffff" style="background-color: #ffffff; padding: 2em; font-size: 16px; line-height: 22px; font-family: Helvetica, Arial, sans-serif; color: #000;">
+                <td class="container-padding" bgcolor="#ffffff" style="background-color: #ffffff; font-size: 16px; line-height: 22px; font-family: Helvetica, Arial, sans-serif; color: #000;">
                   <table border="0" cellpadding="0" cellspacing="0" class="columns-container">
                     <tr>
                       <td>
@@ -316,7 +299,7 @@
                 <td>
                   <table border="0" width="600" cellpadding="0" cellspacing="0" class="container" bgcolor="#f7f7f7" align="center">
                     <tr>
-                      <td class="container-padding" bgcolor="#f7f7f7" style="background-color: #f7f7f7; padding: 2em; font-size: 16px; line-height: 22px; font-family: 'Helvetica neue', Helvetica, sans-serif; color: #333;">
+                      <td class="container-padding" bgcolor="#f7f7f7" style="background-color: #f7f7f7; font-size: 16px; line-height: 22px; font-family: 'Helvetica neue', Helvetica, sans-serif; color: #333;">
                         <table border="0" cellpadding="0" cellspacing="0" class="columns-container">
                           <tr>
                             <td>
@@ -352,7 +335,7 @@
                 <td>
                   <table border="0" width="600" cellpadding="0" cellspacing="0" class="container" bgcolor="#f7f7f7" align="center">
                     <tr>
-                      <td class="container-padding" bgcolor="#f7f7f7" style="background-color: #ffffff; padding: 2em; font-size: 16px; line-height: 22px; font-family: 'Helvetica neue', Helvetica, sans-serif; color: #333;">
+                      <td class="container-padding" bgcolor="#f7f7f7" style="background-color: #ffffff; font-size: 16px; line-height: 22px; font-family: 'Helvetica neue', Helvetica, sans-serif; color: #333;">
                         <table border="0" cellpadding="0" cellspacing="0" class="columns-container">
                           <tr>
                             <td>
@@ -391,7 +374,7 @@
           <layout label='Signature and sociallinks'>
             <table border="0" width="600" cellpadding="0" cellspacing="0" class="container" bgcolor="#ffffff">
               <tr>
-                <td class="container-padding" bgcolor="#ffffff" style="padding:2em;background-color: #ffffff;font-size: 16px; line-height: 22px; font-family: Helvetica, Arial, sans-serif; color: #333;">
+                <td class="container-padding" bgcolor="#ffffff" style="background-color: #ffffff;font-size: 16px; line-height: 22px; font-family: Helvetica, Arial, sans-serif; color: #333;">
                   <table border="0" cellpadding="0" cellspacing="0" class="columns-container">
                     <tr>
                       <td>
@@ -428,51 +411,57 @@
             <table border="0" width="600" cellpadding="0" cellspacing="0" class="container" align="center" style="font-size: 12px; line-height: 22px; font-family: 'Helvetica neue', Helvetica, sans-serif; color: #ffffff;">
               <tr>
                 <td>
-                  <div style="font-size:16px;line-height:18px;margin:0.2em 0 0.8em; font-weight:bold;">Our mission is simple: enabling <span style="color:#FF0000; font-weight:bold;">everyone</span> to learn the skills necessary to benefit from the opportunities of the digital age.</div>
-                </td>
-              </tr>
-              <tr>
-                <td height="10"><img src="px.gif" alt="" height="10"></td>
-              </tr>
-              <tr>
-                <td>
-                  <table border="0" cellpadding="0" cellspacing="0">
+                  <table border="0" width="100%" cellpadding="0" cellspacing="0" class="container-padding">
                     <tr>
-                      <td class="sociallinks"><a href="https://twitter.com/epfl_exts" target="_blank"><img src="twitter.png" title="EPFL EXTS on Twitter" alt="Twitter logo" width="40" height="40"></a></td>
-                      <td width="6"><img src="px.gif" width="6" alt=""></td>
-                      <td class="sociallinks"><a href="mailto:exts@epfl.ch" target="_blank"><img src="email.png" title="contact epfl exts by email" alt="Email logo" width="40" height="40"></a></td>
+                      <td>
+                        <div style="font-size:16px;line-height:22px;margin:0.2em 0 0.8em; font-weight:bold;">Our mission is simple: enabling <span style="color:#FF0000; font-weight:bold;">everyone</span> to learn the skills necessary to benefit from the opportunities of the digital age.</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="10"><img src="px.gif" alt="" height="10"></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <table border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td class="sociallinks"><a href="https://twitter.com/epfl_exts" target="_blank"><img src="twitter.png" title="EPFL EXTS on Twitter" alt="Twitter logo" width="40" height="40"></a></td>
+                            <td width="6"><img src="px.gif" width="6" alt=""></td>
+                            <td class="sociallinks"><a href="mailto:exts@epfl.ch" target="_blank"><img src="email.png" title="contact epfl exts by email" alt="Email logo" width="40" height="40"></a></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="10"><img src="px.gif" alt="" height="10"></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p style="font-size: 0.9em;"><a href="https://goo.gl/maps/L6dcsmEEwWo" alt="EPFL Innovation Park"><strong>EPFL Extension School</strong> - EPFL Innovation Park - Building E - 1015 Lausanne - Switzerland</a></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="1" style="background-color:#ffffff"><img src="px.gif" alt="" height="1"></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p style="font-size: 12px;">
+                          You're receiving this message because you subscribed to email newsletters and information from EPFl Extension School. If you do not wish to receive these newsletters anymore, please click the Unsubscribe link below.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <unsubscribe style="color:#ff0000; text-decoration:underline;">Unsubscribe</unsubscribe> &nbsp;|&nbsp; <preferences style="color:#ff0000; text-decoration:underline;">Modify your preferences</preferences>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="30"><img src="px.gif" alt="" height="30"></td>
                     </tr>
                   </table>
                 </td>
               </tr>
-              <tr>
-                <td height="10"><img src="px.gif" alt="" height="10"></td>
-              </tr>
-              <tr>
-                <td>
-                  <p style="font-size: 0.9em;"><a href="https://goo.gl/maps/L6dcsmEEwWo" alt="EPFL Innovation Park"><strong>EPFL Extension School</strong> - EPFL Innovation Park - Building E - 1015 Lausanne - Switzerland</a></p>
-                </td>
-              </tr>
-              <tr>
-                <td height="1" style="background-color:#ffffff"><img src="px.gif" alt="" height="1"></td>
-              </tr>
-              <tr>
-                <td>
-                  <p style="font-size: 0.8em;">
-                    You're receiving this message because you subscribed to email newsletters and information from EPFl Extension School. If you do not wish to receive these newsletters anymore, please click the Unsubscribe link below.
-                  </p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <unsubscribe style="color:#ff0000; text-decoration:underline;">Unsubscribe</unsubscribe> &nbsp;|&nbsp; <preferences style="color:#ff0000; text-decoration:underline;">Modify your preferences</preferences>
-                </td>
-              </tr>
             </table>
           </td>
-        </tr>
-        <tr>
-          <td height="30"><img src="px.gif" alt="" height="30"></td>
         </tr>
       </table>
     </td>
